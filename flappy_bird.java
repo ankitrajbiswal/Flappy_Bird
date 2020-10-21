@@ -140,7 +140,6 @@ public class flappy_bird implements ActionListener, MouseListener, KeyListener
 			for (int i = 0; i < columns.size(); i++)
 			{
 				Rectangle column = columns.get(i);
-
 				if (column.x + column.width < 0)
 				{
 					columns.remove(column);
