@@ -1,6 +1,9 @@
 
 /**
  * @author Ankit Raj Biswal
+    This Game is just created as a Minor Project
+    Contributions are accepted.
+    Please Fork!
  *
  */
 package Flappy_bird;
@@ -17,7 +20,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.Random;
-
 import javax.swing.JFrame;
 import javax.swing.Timer;
 
@@ -25,21 +27,13 @@ public class flappy_bird implements ActionListener, MouseListener, KeyListener
 {
 
 	public static flappy_bird flappyBird;
-
 	public final int WIDTH = 800, HEIGHT = 800;
-
 	public Renderer renderer;
-
 	public Rectangle bird;
-
 	public ArrayList<Rectangle> columns;
-
 	public int ticks, yMotion, score;
-
 	public boolean gameOver, started;
-
 	public Random rand;
-
 	public flappy_bird()
 	{
 		JFrame jframe = new JFrame();
@@ -49,7 +43,7 @@ public class flappy_bird implements ActionListener, MouseListener, KeyListener
 		rand = new Random();
 
 		jframe.add(renderer);
-		jframe.setTitle("Flappy Bird");
+		jframe.setTitle("Flappy Bird by ARB");
 		jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		jframe.setSize(WIDTH, HEIGHT);
 		jframe.addMouseListener(this);
@@ -128,7 +122,6 @@ public class flappy_bird implements ActionListener, MouseListener, KeyListener
 	public void actionPerformed(ActionEvent e)
 	{
 		int speed = 10;
-
 		ticks++;
 
 		if (started)
@@ -136,7 +129,6 @@ public class flappy_bird implements ActionListener, MouseListener, KeyListener
 			for (int i = 0; i < columns.size(); i++)
 			{
 				Rectangle column = columns.get(i);
-
 				column.x -= speed;
 			}
 
@@ -152,7 +144,6 @@ public class flappy_bird implements ActionListener, MouseListener, KeyListener
 				if (column.x + column.width < 0)
 				{
 					columns.remove(column);
-
 					if (column.y == 0)
 					{
 						addColumn(false);
@@ -172,7 +163,6 @@ public class flappy_bird implements ActionListener, MouseListener, KeyListener
 				if (column.intersects(bird))
 				{
 					gameOver = true;
-
 					if (bird.x <= column.x)
 					{
 						bird.x = column.x - bird.width;
@@ -227,11 +217,11 @@ public class flappy_bird implements ActionListener, MouseListener, KeyListener
 		}
 
 		g.setColor(Color.white);
-		g.setFont(new Font("Arial", 1, 100));
+		g.setFont(new Font("Cambria", 1, 100));
 
 		if (!started)
 		{
-			g.drawString("Click to start!", 75, HEIGHT / 2 - 50);
+			g.drawString("Click to Start!", 75, HEIGHT / 2 - 50);
 		}
 
 		if (gameOver)
