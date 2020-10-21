@@ -3,7 +3,9 @@ A small game created using JAVA Swing GUI.
 
 # Instructions for the Game
   The Bird is controlled by both the Space Bar or the Mouse Click.
+  
   Color Combination used therre is very light and decent.
+  
   DO NOT TRY TO CHANGE THE CODE, it may result in getting compile time errors while running it.
   
  # NOTE
